@@ -5,12 +5,13 @@ import {NgxsModule} from '@ngxs/store';
 import {NgxsReduxDevtoolsPluginModule} from '@ngxs/devtools-plugin';
 import {NgxsRouterPluginModule} from '@ngxs/router-plugin';
 import {CORE_STATES} from './ngxs/ngxs.index';
+import {HttpClientModule} from '@angular/common/http';
 
 @NgModule({
   declarations: [],
   imports: [
     CommonModule,
-
+    HttpClientModule,
     NgxsModule.forRoot(CORE_STATES),
     NgxsReduxDevtoolsPluginModule.forRoot(),
     NgxsRouterPluginModule.forRoot()
